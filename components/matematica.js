@@ -54,11 +54,11 @@ app.component('matematica', {
             this.tentativa += 1
             if(this.resposta_correta == this.resposta_inserida){
                 this.acertos += 1
-                this.menssagem = this.resposta_inserida + ' Parabens você acertou!!'
+                this.menssagem = this.resposta_inserida + ', complimenti hai acertatto!!'
                 this.resposta_inserida = null
                 this.gera_aleatorio()
             } else {
-                this.menssagem = this.resposta_inserida + ' não é a resposta correta!!'
+                this.menssagem = this.resposta_inserida + ' non è la risposta corretta!!'
                 this.resposta_inserida = null
             }
             setTimeout(()=>{
