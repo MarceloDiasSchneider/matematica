@@ -63,7 +63,7 @@ app.component('matematica', {
             }
             setTimeout(()=>{
                 this.menssagem = null
-             },3000);
+             },5000);
         }
     },
     watch: {
