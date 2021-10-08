@@ -5,30 +5,30 @@ app.component('matematica', {
             <div class="content-wrapper ml-5 mr-5">
                 <div class="row mt-5 bg-secondary rounded text-white text-center">
                     <div class="col-md-4 rounded pt-2 pb-2 ">
-                        <h3>Todas as tentativas</h3>
+                        <h3>Tutti i tentativi</h3>
                         <p v-for="tentativa in tentativas">{{ tentativa }}</p>
                     </div>    
                     <div class="col-md-4 rounded pt-2 pb-2 bg-warning">
                         <div class="input-group mb-3">
-                            <input type="number" class="form-control" placeholder="Qual taboada você quer aprender" aria-label="Qual taboada você quer aprender" aria-describedby="basic-addon1" v-model="taboada">
+                            <input type="number" class="form-control" placeholder="Qual tabellina voi imparare?" aria-label="Qual taboada você quer aprender" aria-describedby="basic-addon1" v-model="taboada">
                         </div>
                         <form action="#" @submit.prevent="verifica_resposta">
                             <div class="input-group mb-3" v-show="taboada">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">Qual a multiplicação de: {{ taboada }} x {{ aleatorio }}</span>
+                                    <span class="input-group-text" id="basic-addon1">Quanto fa {{ taboada }} x {{ aleatorio }}?</span>
                                 </div>
                                 <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" required v-model="resposta_inserida">
                             </div>
                             <div class="float-right ml-1">
-                                <button type="button" class="btn btn-primary" v-show="taboada">Verificar</button>
+                                <button type="button" class="btn btn-primary" v-show="taboada" @click="verifica_resposta">Controllare</button>
                             </div>
                         </form>
                         <h6 class="text-dark">{{ menssagem }}</h6>
                     </div>    
                     <div class="col-md-4 rounded pt-2 pb-2 ">
-                        <h3>Seu historico</h3>
-                        <p>Tentativas: {{ tentativa }}</p>
-                        <p>Acertos: {{ acertos }}</p>
+                        <h3>Tuo storico</h3>
+                        <p>Tentativi: {{ tentativa }}</p>
+                        <p>Successi: {{ acertos }}</p>
                     </div>    
                 </div>    
             </div>    
