@@ -46,7 +46,7 @@ app.component('matematica', {
     },
     methods: {
         gera_aleatorio(){
-            this.aleatorio = Math.floor(Math.random() * 11);
+            this.aleatorio = Math.floor(Math.random() * 10) + 1;
         },
         verifica_resposta(){
             let tentativa = `${this.taboada} X ${this.aleatorio} = ${this.resposta_correta}`
